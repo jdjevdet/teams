@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: teams-epg
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: THESPORTSDB_API_KEY
+        sync: false
+      - key: EPG_TIMEZONE
+        value: America/Toronto
+      - key: REFRESH_HOUR
+        value: 7
+      - key: REFRESH_MINUTE
+        value: 0
+      - key: UPCOMING_LEAD_HOURS
+        value: 6
+      - key: REFRESH_TOKEN
+        generateValue: true

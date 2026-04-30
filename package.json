@@ -1,0 +1,14 @@
+{
+  "name": "teams-epg",
+  "version": "1.0.0",
+  "description": "Generate XMLTV EPG listings for pro sports teams using TheSportsDB.",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "generate": "node src/generate.js",
+    "test": "node test/run-tests.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

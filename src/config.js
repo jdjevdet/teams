@@ -21,6 +21,30 @@ export const leagues = [
     defaultDurationMinutes: 180
   },
   {
+    slug: "milb-pcl",
+    channelSlug: "milb",
+    id: "5065",
+    scheduleName: "Pacific Coast League",
+    displayName: "MiLB Pacific Coast League",
+    defaultDurationMinutes: 180
+  },
+  {
+    slug: "milb-il",
+    channelSlug: "milb",
+    id: "5085",
+    scheduleName: "International League",
+    displayName: "MiLB International League",
+    defaultDurationMinutes: 180
+  },
+  {
+    slug: "milb-nwl",
+    channelSlug: "milb",
+    id: "5752",
+    scheduleName: "Northwest League",
+    displayName: "MiLB Northwest League",
+    defaultDurationMinutes: 180
+  },
+  {
     slug: "nfl",
     id: "4391",
     scheduleName: "NFL",

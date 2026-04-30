@@ -4,7 +4,7 @@ import { addMinutes, startOfZonedDay, xmltvTime } from "./time.js";
 export function buildXmltv({ leagues, teamsByLeague, eventsByLeague, dateKey, timezone, upcomingLeadHours, noEventTitle, sourceInfoName, sourceInfoUrl }) {
   const channels = leagues.flatMap((league) =>
     (teamsByLeague.get(league.slug) || []).map((team) => ({
-      id: channelId(team.name, league.slug),
+      id: channelId(team.name, channelSlug(league)),
       name: `${team.name} ${league.displayName}`,
       icon: team.badge || ""
     }))
@@ -25,7 +25,7 @@ export function buildXmltv({ leagues, teamsByLeague, eventsByLeague, dateKey, ti
         .filter((event) => event.start && event.end)
         .sort((a, b) => a.start - b.start);
 
-      const channel = channelId(team.name, league.slug);
+      const channel = channelId(team.name, channelSlug(league));
       let cursor = dayStart;
 
       if (teamEvents.length === 0) {
@@ -127,4 +127,8 @@ function escapeXml(value) {
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&apos;");
+}
+
+function channelSlug(league) {
+  return league.channelSlug || league.slug;
 }

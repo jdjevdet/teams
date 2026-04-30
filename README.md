@@ -1,6 +1,6 @@
 # Teams EPG
 
-Generates an XMLTV EPG file with one channel per team for MLB, NFL, MLS, NHL, and NBA.
+Generates an XMLTV EPG file with one channel per team for MLB, MiLB, NFL, MLS, NHL, and NBA.
 
 Example channel IDs:
 
@@ -9,6 +9,7 @@ Example channel IDs:
 - `BostonCeltics.nba`
 - `TorontoRaptors.nba`
 - `ColoradoRockies.mlb`
+- `BuffaloBisons.milb`
 
 Each game day channel gets programme blocks like:
 
